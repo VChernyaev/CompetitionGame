@@ -1,15 +1,15 @@
 package homeTasks.CompetitionGame;
 
-public class SwimmingPool implements Obstacle {
+public class SwimmingPool {
+
     private final int distance;
 
     public SwimmingPool(int distance) {
         this.distance = distance;
     }
 
-    @Override
-    public boolean pass(Participian participian) {
-        return participian.getSwim() >= distance;
+    public boolean pass(CanSwim canSwim) {
+        return canSwim.getSwim() >= distance;
 
     }
 

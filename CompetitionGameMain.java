@@ -29,18 +29,19 @@ public class CompetitionGameMain {
 
     private static Obstacle[] creatObstacles() {
         return new Obstacle[] {
-                new Road(100),
-                new Road(45),
-                new SwimmingPool(20),
-                new Wall(40)
+                new RoadObstacleAdapter(new Road(100)),
+                new RoadObstacleAdapter(new Road(45)),
+                new SwimObstacleAdapter(new SwimmingPool(20)),
+                new WallObstacleAdapter(new Wall(30)),
+                new MountainObstacleAdapter(new Mountain(80))
 
         };
     }
 
     private static Participian[] createParticipians() {
         return new Participian[] {
-                new StandardParticipant("Igor", 50, 30, 30),
-                new Cat("Murzik", 60, 25),
+                new StandardParticipant("Igor", 50, 30, 30, 60),
+                new Cat("Murzik", 60, 25, 60),
                 new Cheater("Cheater")
         };
     }

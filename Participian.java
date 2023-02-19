@@ -1,12 +1,7 @@
 package homeTasks.CompetitionGame;
 
-public interface Participian {
+public interface Participian extends CanJump, CanRun, CanSwim, CanClimb {
 
     String getName();
 
-    int getJump();
-
-    int getRun();
-
-    int getSwim();
 }

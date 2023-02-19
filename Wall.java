@@ -1,15 +1,15 @@
 package homeTasks.CompetitionGame;
 
-public class Wall implements Obstacle {
+public class Wall {
+
     private final int height;
 
     public Wall(int height) {
         this.height = height;
     }
 
-    @Override
-    public boolean pass(Participian participian) {
-        return participian.getJump() >= height;
+    public boolean pass(CanJump canJump) {
+        return canJump.getJump() >= height;
 
     }
 

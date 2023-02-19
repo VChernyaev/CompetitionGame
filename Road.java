@@ -1,15 +1,14 @@
 package homeTasks.CompetitionGame;
 
-public class Road implements Obstacle {
+public class Road {
     private final int distance;
 
     public Road(int distance) {
         this.distance = distance;
     }
 
-    @Override
-    public boolean pass(Participian participian) {
-        return participian.getRun() >= distance;
+    public boolean pass(CanRun canRun) {
+        return canRun.getRun() >= distance;
 
     }
 
